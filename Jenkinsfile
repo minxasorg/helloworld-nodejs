@@ -1,13 +1,11 @@
 pipeline {
   agent any
   stages {
-    stage('master') {
+    stage('Say Hello') {
       steps {
-        echo 'hi'
+        echo 'Hello World!'   
+        sh 'java -version'
       }
     }
-  }
-  environment {
-    minxas = ''
   }
 }
