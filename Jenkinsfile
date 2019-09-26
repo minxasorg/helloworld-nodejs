@@ -5,7 +5,7 @@ pipeline {
     skipDefaultCheckout true
   }
   triggers {
-    publishEvent simpleEvent('hello-api-deploy-event')
+    eventTrigger simpleMatch('hello-api-deploy-event')
   }
   stages {
     stage('Test') {
