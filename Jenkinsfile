@@ -6,15 +6,16 @@ pipeline {
   }
   stages {
     stage('Test') {
-       agent {
-        kubernetes {
+       agent 			{
+        kubernetes 			{
           label 'nodejs-app-pod'
           yamlFile 'nodejs-pod.yaml'
-			}
-        }
-      }
-    }
-    stage('Build and Push Image') {
+							}
+						}
+				   }
+		  }
+		  
+    stage('Test') {
       when {
         beforeAgent true
         branch 'master'
